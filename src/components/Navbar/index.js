@@ -18,7 +18,7 @@ const Navbar = ({ toggleNav }) => {
             <Nav>
                 <NavbarContainer>
                     <NavLogo>
-                        LoGo!
+                        Biffled!
                     </NavLogo>
                     <MobileIcn onClick={toggleNav}>
                         <FaBars/>
@@ -31,7 +31,7 @@ const Navbar = ({ toggleNav }) => {
                             <NavLink to="discover">Discover</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="contact">Contact</NavLink>
+                            <NavLink to="contact">Download</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink to="register">Register</NavLink>
