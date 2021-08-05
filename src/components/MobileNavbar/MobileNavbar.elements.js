@@ -8,7 +8,7 @@ export const MobileNavbarContainer= styled.aside`
     z-index: 999;
     width: 100%;
     height: 100%;
-    background-color: #0D0D0D;
+    background-color: #4B38D3;
     display: grid;
     align-items: center;
     top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
@@ -36,11 +36,11 @@ export const MobileNavbarWrapper = styled.div`
 export const MobileNavbarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 4.5rem);
+    grid-template-rows: repeat(4, 4.5rem);
     text-align: center;
 
     @media screen and (max-width: 480px) {
-        grid-template-rows: repeat(6, 4.5rem);
+        grid-template-rows: repeat(4, 4.5rem);
     }
 `;
 
@@ -52,38 +52,27 @@ export const MobileNavbarLink = styled(LinkS)`
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
-    transition: 0ms.2s ease-in-out;
     color: #FFFFFF;
     cursor: pointer;
-
-    &:hover {
-        color: #01BF71;
-        transition: 0ms.2s ease-in-out;
-    }
 `;
 
 export const MobileBtnWrapper = styled.div`
     display: flex;
     justify-content: center;
+    margin-top: 5rem;
 `;
 
 export const MobileNavRouter = styled(LinkR)`
     border-radius: 0.35rem;
-    background-color: #01BF71;
+    background-color: #FFFFFF;
     white-space: nowrap;
     padding: 0.75rem 1.5rem;
-    color: #010606;
+    color: #4B38D3;
     font-size: .9rem;
+    font-weight: bold;
     font-family: 'Poppins', sans-serif;
     outline: none;
     border: none;
     cursor: pointer;
-    transition: all .2s ease-in-out;
     text-decoration: none;
-
-    &:hover {
-        transition: all .2s ease-in-out;
-        background-color: #FFFFFF;
-        color: #010606;
-    }
 `;

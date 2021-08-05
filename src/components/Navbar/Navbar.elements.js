@@ -3,9 +3,8 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
-    background-color: #000;
+    background-color: #4B38D3;
     height: 4.5rem;
-    /* margin-top: -4.5rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,13 +30,12 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-    color: #fff;
+    color: #FFFFFF;
     justify-content: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     display: flex;
     align-items: center;
-    margin-left: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -72,11 +70,11 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled(LinkS)`
-    color: #fff;
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1.75rem;
+    padding: 0 2rem;
     height: 100%;
     cursor: pointer;
     font-size: 1rem;
@@ -84,7 +82,7 @@ export const NavLink = styled(LinkS)`
     font-weight: 300;
 
     &.active {
-        border-bottom: 0.25rem solid #01BF71;
+        border-bottom: 0.125rem solid #FFFFFF;
     }
 `;
 
@@ -99,21 +97,20 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
     border-radius: 0.25rem;
-    background-color: #01BF71;
     white-space: nowrap;
-    padding: 0.625rem 1.25rem;
-    color: #010606;
+    padding: 0.45rem 1.25rem;
+    color: #FFFFFF;
     font-size: .9rem;
+    font-weight: bold;
     outline: none;
-    border: none;
+    border: 0.125rem solid #FFFFFF;
     cursor: pointer;
     transition: all .3s ease-in-out;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 
     &:hover {
-        transition: all .3s ease-in-out;
+        color: #4B38D3;
         background-color: #FFFFFF;
-        color: #010606;
     }
 `;

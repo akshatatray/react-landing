@@ -18,27 +18,27 @@ const Navbar = ({ toggleNav }) => {
             <Nav>
                 <NavbarContainer>
                     <NavLogo>
-                        LoGo!
+                        Biffled!
                     </NavLogo>
                     <MobileIcn onClick={toggleNav}>
                         <FaBars/>
                     </MobileIcn>
                     <NavMenu>
                         <NavItem>
-                            <NavLink to="about">About</NavLink>
+                            <NavLink to="product">Product</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="discover">Discover</NavLink>
+                            <NavLink to="learn">Learn</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="contact">Contact</NavLink>
+                            <NavLink to="download">Download</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink to="register">Register</NavLink>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="/login">Log In</NavBtnLink>
+                        <NavBtnLink to="/login">LOG IN</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
