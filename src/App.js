@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from "./pages/Home";
+
 const App = () => {
   return (
-    <div>
-      App!
-    </div>
+    <Router>
+      <Route path="/" exact component={Home} />
+    </Router>
   );
 }
 
