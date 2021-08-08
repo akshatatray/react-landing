@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { 
     Nav, 
     NavbarContainer, 
@@ -13,32 +13,42 @@ import {
 import { FaBars } from 'react-icons/fa';
 
 const Navbar = ({ toggleNav }) => {
+    const [navScroll, setNavScroll] = useState(false);
+
+    const handleNavScroll = () => {
+        (window.scrollY >= 72) ? setNavScroll(true) : setNavScroll(false);
+    }
+
+    useEffect (() => {
+        window.addEventListener('scroll', handleNavScroll);
+    }, []);
+
     return (
         <>
-            <Nav>
+            <Nav navScroll={navScroll}>
                 <NavbarContainer>
-                    <NavLogo>
+                    <NavLogo navScroll={navScroll}>
                         Biffled!
                     </NavLogo>
                     <MobileIcn onClick={toggleNav}>
-                        <FaBars/>
+                        <FaBars style={navScroll ? {color: "#FFFFFF"} : {color: "#4B38D3"}}/>
                     </MobileIcn>
                     <NavMenu>
                         <NavItem>
-                            <NavLink to="product">Product</NavLink>
+                            <NavLink navScroll={navScroll} to="product">Product</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="learn">Learn</NavLink>
+                            <NavLink navScroll={navScroll} to="learn">Learn</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="download">Download</NavLink>
+                            <NavLink navScroll={navScroll} to="download">Download</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="register">Register</NavLink>
+                            <NavLink navScroll={navScroll} to="register">Register</NavLink>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="/login">LOG IN</NavBtnLink>
+                        <NavBtnLink navScroll={navScroll} to="/login">LOG IN</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
