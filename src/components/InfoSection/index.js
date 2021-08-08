@@ -29,7 +29,6 @@ const InfoSection = () => {
                 </ISBtn>
             </InfoSectionTextWrapper>
             <InfoSectionImageWrapper>
-                {/* <ISImg /> */}
                 <ISImg alt="Hero Image" src={HeroImg} />
             </InfoSectionImageWrapper>
         </InfoSectionContainer>

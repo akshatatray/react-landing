@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link as LinkR } from 'react-router-dom';
-import HeroImg from '../../assets/img/hero.svg';
 
 export const InfoSectionContainer = styled.div`
     max-width: 1200px;
@@ -73,7 +72,7 @@ export const ISBtnLink = styled(LinkR)`
     white-space: nowrap;
     padding: 0.45rem 2rem;
     color: #4B38D3;
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: bold;
     outline: none;
     border: 0.125rem solid #4B38D3;
