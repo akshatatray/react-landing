@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
-    background-color: #4B38D3;
+    background-color: ${({ navScroll }) => (navScroll ? "#4B38D3" : "transparent")};
     height: 4.5rem;
     display: flex;
     justify-content: center;
@@ -11,11 +11,12 @@ export const Nav = styled.nav`
     font-size: 1rem;
     position: sticky;
     top: 0;
-    box-shadow: 0 5px 20px -5px rgb(0 0 0 / 10%);
+    box-shadow: ${({ navScroll }) => (navScroll ? "0 5px 20px -5px rgb(0 0 0 / 10%)" : "none")};
     z-index: 10;
+    transition:  .4s all ease;
 
     @media screen and (max-width: 960px) {
-        transition:  0.75s all ease;
+        transition:  0.1s all ease;
     }
 `;
 
@@ -30,7 +31,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-    color: #FFFFFF;
+    color: ${({ navScroll }) => (navScroll ? "#FFFFFF" : "#4B38D3")};
     justify-content: flex-start;
     cursor: pointer;
     font-size: 1.75rem;
@@ -39,6 +40,7 @@ export const NavLogo = styled(LinkR)`
     font-weight: bold;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    transition:  0.1s all ease;
 `;
 
 export const MobileIcn = styled.div`
@@ -70,7 +72,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled(LinkS)`
-    color: #FFFFFF;
+    color: ${({ navScroll }) => (navScroll ? "#FFFFFF" : "#4B38D3")};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -79,7 +81,8 @@ export const NavLink = styled(LinkS)`
     cursor: pointer;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    font-weight: ${({ navScroll }) => (navScroll ? "300" : "bold")};
+    transition:  0.1s all ease;
 
     &.active {
         border-bottom: 0.125rem solid #FFFFFF;
@@ -99,18 +102,18 @@ export const NavBtnLink = styled(LinkR)`
     border-radius: 0.25rem;
     white-space: nowrap;
     padding: 0.45rem 1.25rem;
-    color: #FFFFFF;
+    color: ${({ navScroll }) => (navScroll ? "#FFFFFF" : "#4B38D3")};
     font-size: .9rem;
     font-weight: bold;
     outline: none;
-    border: 0.125rem solid #FFFFFF;
+    border: ${({ navScroll }) => (navScroll ? "0.125rem solid #FFFFFF" : "0.125rem solid #4B38D3")};
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition:  0.1s all ease;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 
     &:hover {
-        color: #4B38D3;
-        background-color: #FFFFFF;
+        color: ${({ navScroll }) => (navScroll ? "#4B38D3" : "#FFFFFF")};
+        background-color: ${({ navScroll }) => (navScroll ? "#FFFFFF" : "#4B38D3")};
     }
 `;

@@ -36,14 +36,14 @@ export const InfoSectionImageWrapper = styled.div`
 `;
 
 export const ISHeading = styled.h1`
-    font-size: 3.25rem;
+    font-size: 4rem;
     font-family: 'Montserrat', sans-serif;
     color: #343434;
     margin: 0 0 1.5rem 0;
 
     @media screen and (max-width: 768px) {
-        font-size: 2.5rem;
-        margin: 0 0 1rem 0;
+        font-size: 3rem;
+        margin: 0 0 1.5rem 0;
         width: 100%;
     }
 `;
@@ -56,7 +56,7 @@ export const ISDetails = styled.p`
 
     @media screen and (max-width: 768px) {
         font-size: 0.925rem;
-        margin: 0 0 1rem 0;
+        margin: 0 0 1.5rem 0;
         width: 100%;
     }
 `;
@@ -88,7 +88,7 @@ export const ISBtnLink = styled(LinkR)`
 `;
 
 export const ISImg = styled.img`
-    width: 100%;
+    width: calc(100% - 4rem);
 `;
 
 export const Blue = styled.span`

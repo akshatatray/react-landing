@@ -17,8 +17,8 @@ const InfoSection = () => {
         <InfoSectionContainer>
             <InfoSectionTextWrapper>
                 <ISHeading>
-                    “Your <Blue>Vibe</Blue> {<br />}
-                    attracts Your <Blue>Tribe!</Blue>”
+                    Your <Blue>Vibe</Blue> {<br />}
+                    attracts Your <Blue>Tribe!</Blue>
                 </ISHeading>
                 <ISDetails>
                     Make new friends! Just by Swiping new Faces {<br />}
